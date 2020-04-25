@@ -13,17 +13,23 @@
       <div class="profile-picture">
         <img src="https://www.w3schools.com/howto/img_avatar.png">
     </div>
-    <a id="nav-home" mat-list-item routerLink='home' routerLinkActive="active">Home</a>
-    <!-- <a id="nav-schulauswahl" mat-list-item routerLink='page1' routerLinkActive="active" *ngIf="loggedIn">
-        Page 1
+    <a id="nav-home" mat-list-item routerLink='/home' routerLinkActive="active">Home</a>
+    <a id="nav-schulauswahl" mat-list-item routerLink='/about' routerLinkActive="active" >
+        About me
     </a>
-    <a id="nav-schule-list" mat-list-item routerLink='page2' routerLinkActive="active" *ngIf="loggedIn">
-        Page 2 with very long name
-    </a> -->
+    <a id="nav-schule-list" mat-list-item routerLink='/contact' routerLinkActive="active" >
+        Contact
+    </a>
     </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
     <button mat-icon-button color="accent" (click)="sidenav.toggle()">{{toggleBtnText}}</button>
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
