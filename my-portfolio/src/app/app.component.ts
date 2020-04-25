@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-portfolio';
+  opened= true;
+  toggleBtnText='Close'
+  setToggleBtnText(text){
+    this.toggleBtnText=text;
+  }
 }

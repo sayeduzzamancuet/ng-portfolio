@@ -1,13 +1,21 @@
 <mat-toolbar color="primary">
   <div>Welcome</div>
   <div>
-    <span></span>
-  </div>
-  <div>
     <button mat-button>Home</button>
     <button mat-button>Portfolio</button>
-    <button mat-button>CheatSheets</button>
+    <button mat-button>Cheat Sheets</button>
     <button mat-button>About</button>
-    
   </div>
 </mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav 
+  mode="side" 
+  (opened)="setToggleBtnText('Close')"  
+  (closed)="setToggleBtnText('Open')" 
+  [(opened)]="opened">Side Nav
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <button mat-button (click)="sidenav.toggle()">{{toggleBtnText}}</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
