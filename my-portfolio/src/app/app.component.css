@@ -12,5 +12,16 @@ mat-sidenav,mat-sidenav-content{
 }
 mat-sidenav{
     background-color:darkslateblue;
-    width: 350px;
+    width: 300px;
+}
+fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  .profile-picture img{
+    width: 85%;
+    height: 75%;
+    text-align: center;
+    position: relative;
 }

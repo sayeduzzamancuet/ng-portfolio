@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
-  <div>Welcome</div>
-  <div>
+  <div >Welcome</div>
+  <div class="fill-remaining-space">
     <button mat-button>Home</button>
     <button mat-button>Portfolio</button>
     <button mat-button>Cheat Sheets</button>
@@ -8,14 +8,22 @@
   </div>
 </mat-toolbar>
 <mat-sidenav-container>
-  <mat-sidenav #sidenav 
-  mode="side" 
-  (opened)="setToggleBtnText('Close')"  
-  (closed)="setToggleBtnText('Open')" 
-  [(opened)]="opened">Side Nav
+  <mat-sidenav #sidenav mode="side" (opened)="setToggleBtnText('Close')" (closed)="setToggleBtnText('Open')" [(opened)]="opened">SAYED UZ ZAMAN
+    <mat-nav-list>
+      <div class="profile-picture">
+        <img src="https://www.w3schools.com/howto/img_avatar.png">
+    </div>
+    <a id="nav-home" mat-list-item routerLink='home' routerLinkActive="active">Home</a>
+    <!-- <a id="nav-schulauswahl" mat-list-item routerLink='page1' routerLinkActive="active" *ngIf="loggedIn">
+        Page 1
+    </a>
+    <a id="nav-schule-list" mat-list-item routerLink='page2' routerLinkActive="active" *ngIf="loggedIn">
+        Page 2 with very long name
+    </a> -->
+    </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <button mat-button (click)="sidenav.toggle()">{{toggleBtnText}}</button>
+    <button mat-icon-button color="accent" (click)="sidenav.toggle()">{{toggleBtnText}}</button>
   </mat-sidenav-content>
 </mat-sidenav-container>
