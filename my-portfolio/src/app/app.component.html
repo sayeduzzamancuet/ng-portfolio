@@ -10,16 +10,18 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" (opened)="setToggleBtnText('Close')" (closed)="setToggleBtnText('Open')" [(opened)]="opened">SAYED UZ ZAMAN
     <mat-nav-list>
-      <div class="profile-picture">
+      <div mat-list-item class="profile-picture">
         <img src="https://www.w3schools.com/howto/img_avatar.png">
     </div>
-    <a id="nav-home" mat-list-item routerLink='/home' routerLinkActive="active">Home</a>
-    <a id="nav-schulauswahl" mat-list-item routerLink='/about' routerLinkActive="active" >
-        About me
-    </a>
-    <a id="nav-schule-list" mat-list-item routerLink='/contact' routerLinkActive="active" >
-        Contact
-    </a>
+    <a mat-list-item routerLink='/home' routerLinkActive="active">Home</a>
+    <a mat-list-item routerLink='/about' routerLinkActive="active" >About me </a>
+    <a mat-list-item routerLink='/contact' routerLinkActive="active" > Contact</a>
+  <div mat-list-item>
+    <ul>
+      <li><a href="tel:+8801799-026515"><img mat-list-item src="~/../../assets/call.svg"></a></li>
+      <li><a href="mailto:sayeduzzamancuet@gmail.com"><img mat-list-item src="~/../../assets/email.svg"></a></li>
+    </ul>
+  </div>
     </mat-nav-list>
   </mat-sidenav>
 
