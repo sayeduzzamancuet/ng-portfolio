@@ -12,7 +12,7 @@ import {
     trigger('fade',[
       transition('void=>*',[
         style({opacity: 0}),
-        animate(4000)
+        animate(2500)
       ])
     ])]
 })

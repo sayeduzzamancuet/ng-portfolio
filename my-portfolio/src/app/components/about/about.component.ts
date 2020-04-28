@@ -11,8 +11,8 @@ import {
   animations: [
     trigger('fade',[
       transition('void=>*',[
-        style({opacity: 0}),
-        animate(4000)
+        style({transform: 'translateY(100%)'}),
+        animate(1500)
       ])
     ])]
 })

@@ -2,9 +2,10 @@
   <div >Welcome</div>
   <div class="fill-remaining-space">
     <button mat-button>Home</button>
-    <button mat-button>Portfolio</button>
     <button mat-button>Cheat Sheets</button>
     <button mat-button>About</button>
+    <a mat-button href="tel:+8801799-026515"><i><img mat-list-item src="~/../../assets/call.svg"></i></a>
+    <a mat-button href="mailto:sayeduzzamancuet@gmail.com"><i><img mat-list-item src="~/../../assets/email.svg"></i></a>
   </div>
 </mat-toolbar>
 <mat-sidenav-container>
@@ -13,15 +14,10 @@
       <div mat-list-item class="profile-picture">
         <img src="https://www.w3schools.com/howto/img_avatar.png">
     </div>
-    <a mat-list-item routerLink='/home' routerLinkActive="active">Home</a>
-    <a mat-list-item routerLink='/about' routerLinkActive="active" >About me </a>
-    <a mat-list-item routerLink='/contact' routerLinkActive="active" > Contact</a>
-  <div mat-list-item>
-    <ul>
-      <li><a href="tel:+8801799-026515"><img mat-list-item src="~/../../assets/call.svg"></a></li>
-      <li><a href="mailto:sayeduzzamancuet@gmail.com"><img mat-list-item src="~/../../assets/email.svg"></a></li>
-    </ul>
-  </div>
+    <a mat-list-item routerLink='/home' routerLinkActive="active"><i><img mat-list-item src="~/../../assets/home.svg"></i>Home</a>
+    <a mat-list-item routerLink='/about' routerLinkActive="active" ><i><img mat-list-item src="~/../../assets/info.svg"></i>About me </a>
+    <a mat-list-item routerLink='/portfolio' routerLinkActive="active" ><i><img mat-list-item src="~/../../assets/folder.svg"></i> Portfolio</a>
+    <a mat-list-item routerLink='/contact' routerLinkActive="active" ><i><img mat-list-item src="~/../../assets/feedback.svg"></i> Contact</a>
     </mat-nav-list>
   </mat-sidenav>
 
