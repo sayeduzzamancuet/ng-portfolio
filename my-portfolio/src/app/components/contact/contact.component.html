@@ -1,1 +1,26 @@
-<p @fade>contact form!</p>
+<div>
+    <p @fade>contact form!</p>
+
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <table>
+        <tr>
+            <mat-form-field class=""><mat-label>First Name</mat-label><input formControlName="firstName"  matInput required></mat-form-field>
+            <mat-form-field class=""><mat-label>Last Name</mat-label><input formControlName="lastName"  matInput required></mat-form-field>
+        </tr>
+        <tr>
+            <mat-form-field class=""><mat-label>Your Email</mat-label><input formControlName="email" required  matInput></mat-form-field>
+        </tr>
+        <tr>
+            <mat-form-field class=""><mat-label>Message</mat-label>
+            <textarea  formControlName="message" matInput required></textarea> </mat-form-field>
+        </tr>
+        <tr>
+            <button mat-button color="accent" type="submit">Send</button>
+            <button mat-button color="accent" type="reset">Clear</button>
+        </tr>
+    </table>
+
+
+</form>
+    
+</div>

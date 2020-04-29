@@ -9,7 +9,7 @@ import {Routes,RouterModule} from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component'
-
+import {ReactiveFormsModule} from '@angular/forms';
 const appRoutes: Routes=[
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
@@ -29,6 +29,7 @@ const appRoutes: Routes=[
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  transition,
-  trigger,
-  style,
-  animate} from '@angular/animations';
+import {transition, trigger, style, animate} from '@angular/animations';
+import { FormGroup, FormControl } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -12,15 +12,25 @@ import {
     trigger('fade',[
       transition('void=>*',[
         style({opacity: 0}),
-        animate(4000)
+        animate(2500)
       ])
     ])]
 })
 export class ContactComponent implements OnInit {
-
-  constructor() { }
-
+  contactForm=new FormGroup({
+    firstName: new FormControl(),
+    lastName: new FormControl(),
+    email: new FormControl(),
+    message: new FormControl()
+  });
+  constructor(private _snackBar: MatSnackBar) { }
+ 
   ngOnInit(): void {
   }
-
+  onSubmit(){
+    this._snackBar.open("Email has been sent", "Ok", {
+      duration: 5000,
+    });
+    console.log(this.contactForm.value);
+  }
 }
