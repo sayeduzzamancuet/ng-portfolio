@@ -10,6 +10,10 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component'
 import {ReactiveFormsModule} from '@angular/forms';
+import { DataTableComponent } from './data-table/data-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 const appRoutes: Routes=[
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
@@ -22,7 +26,8 @@ const appRoutes: Routes=[
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,10 @@ const appRoutes: Routes=[
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
