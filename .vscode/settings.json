@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/35a9e446-c979-4c77-9987-f42ff63e904e/resourceGroups/ng-portfolio/providers/Microsoft.Web/sites/sayeduzzamancuet",
+    "appService.deploySubpath": ""
+}
