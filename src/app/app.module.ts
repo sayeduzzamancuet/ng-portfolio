@@ -35,8 +35,7 @@ const appRoutes: Routes=[
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes),
-    MatTableModule,
+    RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
     MatPaginatorModule,
     MatSortModule
   ],

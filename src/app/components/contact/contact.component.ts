@@ -3,7 +3,6 @@ import {transition, trigger, style, animate} from '@angular/animations';
 import { FormGroup, FormControl } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
