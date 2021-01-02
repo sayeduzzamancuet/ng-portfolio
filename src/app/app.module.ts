@@ -14,6 +14,8 @@ import { DataTableComponent } from './data-table/data-table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 const appRoutes: Routes=[
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
@@ -31,6 +33,7 @@ const appRoutes: Routes=[
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
@@ -38,8 +41,9 @@ const appRoutes: Routes=[
     RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
     MatPaginatorModule,
     MatSortModule
+ 
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {transition, trigger, style, animate} from '@angular/animations';
 import { FormGroup, FormControl } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { EmailService } from 'src/app/services/email.service';
 
 @Component({
   selector: 'app-contact',
@@ -22,11 +23,12 @@ export class ContactComponent implements OnInit {
     email: new FormControl(),
     message: new FormControl()
   });
-  constructor(private _snackBar: MatSnackBar) { }
+  constructor(private _snackBar: MatSnackBar,public emailService:EmailService) { }
  
   ngOnInit(): void {
   }
   onSubmit(){
+    this.emailService.sendMail();
     this._snackBar.open("Email has been sent", "Ok", {
       duration: 5000,
     });
